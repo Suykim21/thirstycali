@@ -1,0 +1,70 @@
+<!DOCTYPE html> {% load staticfiles %}
+
+<html lang="en">
+
+<head>
+    <title>Thirsty Cali</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'cali/css/animate.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'cali/css/index.css'%}" type="text/css">
+</head>
+
+<body>
+    <header>
+        <i class="ion-navicon toggle_menu"></i>
+
+        <div class="sidebar_menu">
+            <i class="ion-close-round close_menu"></i>
+            <div class="center">
+
+                <h1 class="boxed_logo">
+                    thirsty <span class="logo_title">cali</span>
+                </h1>
+                <h2 class="logo_tagline">satisfying your crave</h2>
+            </div>
+
+            <ul class="nav_selection">
+                {% block nav %}
+                <li class="nav_item active"><a class="scroll" href="#about">about</a></li>
+                <li class="nav_item"><a class="scroll" href="/menu">menu</a></li>
+                <li class="nav_item"><a class="scroll" href="#location">location</a></li>
+                <li class="nav_item"><a class="scroll" href="/reservation">reservation</a></li>
+                {% endblock %}
+            </ul>
+        </div>
+
+        <div class="main_nav">
+            <nav>
+                <ul class="main_nav_selection">
+                    <li>
+                        <h1>thirsty <span>cali</span></h1>
+                    </li>
+                    {% block nav-two %}
+                    <li><a class="scroll active" href="#about">about</a></li>
+                    <li><a class="scroll" href="/menu">menu</a></li>
+                    <li><a class="scroll" href="#location">location</a></li>
+                    <li><a class="scroll" href="/reservation">reservation</a></li>
+                    {% endblock %}
+                </ul>
+            </nav>
+        </div>
+    </header>
+    {% block content %}{% endblock content %} {% include 'cali/snippets/footer.html' %}
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+    <script src="{% static 'cali/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'cali/js/index.js' %}"></script>
+</body>
+
+</html>

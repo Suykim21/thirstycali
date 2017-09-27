@@ -1,0 +1,102 @@
+{% extends "cali/base.html" %} {% block content %}
+
+
+
+<section class="reservation_form" id="back">
+    <h1>reservation</h1>
+    <h4>burgers and beers for your party</h4>
+
+    {% if messages %}
+    {% for message in messages %}
+        <ul>
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+            {{ message }}
+            </li>
+        </ul>
+    {% endfor %}
+    {% endif %}
+
+    
+    <form action="/addreservation" class="reservation_form" method="POST">
+        {% csrf_token %}
+        <fieldset>
+            <div class="name">
+                Name <span class="required">*</span>
+            </div>
+            <div class="field_one">
+                <label for="first_name" class="caption">
+                     <input class="field-element" type="text" name="first_name"> 
+                        First Name
+                </label>
+            </div>
+            <div class="field_one last_name">
+                <label for="last_name" class="caption">
+                    <input class="field-element" type="text" name="last_name"> 
+                        Last Name
+                </label>
+            </div>
+        </fieldset>
+
+        <div class=field>
+            <div class="form">
+                <label class="name phone" for="phone_number">Phone<span class="required">*</span></label>
+                <input type="text" class="field-element" name="phone_number" placeholder="(###)###-####">
+            </div>
+        </div>
+
+        <div class=field>
+            <div class="form">
+                <label class="name phone" for="email">Email Address<span class="required">*</span></label>
+                <input type="email" class="field-element" name="email_address">
+            </div>
+        </div>
+
+        <div class=field>
+            <div class="form">
+                <label class="name phone" for="email">Number of  guests<span class="required">*</span></label>
+                <input type="number" class="field-element" name="number_guests" placeholder="Minimum of 12">
+            </div>
+        </div>
+
+        <fieldset>
+            <div class="field_one">
+                <label for="date" class="name phone">
+                    Date<span class="required">*</span>
+                    <input class="field-element" type="date" name="date"> 
+                </label>
+            </div>
+            <div class="field_one">
+                <label for="time" class="name phone">
+                    Time<span class="required">*</span>
+                    <input class="field-element" type="time" name="time"> 
+                </label>
+            </div>
+        </fieldset>
+
+        <div class=field>
+            <div class="form">
+                <label class="name phone" for="request_msg">
+                    Special Request
+                </label>
+                <textarea name="request_msg" class="field-element" cols="30" rows="5"></textarea>
+            </div>
+        </div>
+        
+        <input type="submit" class="submit" value="cheers">
+    </form>
+</section>
+{% endblock %}
+
+{% block nav %}
+<li><a class="nav_item" href="/">home</a></li>
+<li><a class="nav_item" href="/menu">menu</a></li>
+
+{% endblock %} 
+
+{% block nav-two %}
+<div class="menu_nav">
+    <li><a class="nav_item" href="/">home</a></li>
+    <!-- <li><a class="nav_item" href="#">order</a></li> -->
+    <li><a class="nav_item" href="/menu">menu</a></li>
+</div>
+{% endblock %}

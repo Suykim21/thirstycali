@@ -1,0 +1,92 @@
+{% extends "cali/base.html" %} {% load staticfiles %}
+
+<!-- {% extends "cali/snippets/navbar.html"} -->
+
+{% block nav %}
+<li><a class="nav_item" href="/">home</a></li>
+<li><a class="nav_item" href="/reservation">reservation</a></li>
+<li><a class="nav_item" href="#starters">starters</a></li>
+<li><a class="nav_item" href="#burgers">burgers</a></li>
+<li><a class="nav_item" href="#drinks">drinks</a></li>
+
+{% endblock %} 
+
+{% block nav-two %}
+<div class="menu_nav">
+    <li><a class="nav_item" href="/">home</a></li>
+    <li><a class="nav_item" href="/reservation">reservation</a></li>
+    <li><a class="nav_item" href="#starters">starters</a></li>
+    <li><a class="nav_item" href="#burgers">burgers</a></li>
+    <li><a class="nav_item" href="#drinks">drinks</a></li>
+</div>
+{% endblock %} 
+
+{% block content %}
+<section class="starter-hero" id="starters">
+
+    <figure class="starter-item" id="back">
+        <img src="{% static 'cali/img/starter/starter_one.jpg' %}">
+        <figcaption class="starter-desc">
+            <h1>starters</h1>
+        </figcaption>
+    </figure>
+
+    <div class="starter-menu">
+        {% for starter in starters %}
+        <h4>{{starter.title}} <span>{{starter.price}}</span></h4>
+        <p>{{starter.description}}</p>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="burger-hero" id="burgers">
+        
+    <figure class="starter-item">
+        <img src="{% static 'cali/img/starter/starter_two.jpg' %}">
+        <figcaption class="starter-desc">
+            <h1>burgers</h1>
+        </figcaption>
+    </figure>
+        
+    <div class="starter-menu">
+        {% for burger in burgers %}
+        <h4>{{burger.title}} <span>{{burger.price}}</span></h4>
+        <p>{{burger.description}}</p>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="drink-hero" id="drinks">
+        
+    <figure class="starter-item">
+        <img src="{% static 'cali/img/starter/starter_three.jpg' %}">
+        <figcaption class="starter-desc">
+            <h1>drinks</h1>
+        </figcaption>
+    </figure>
+        
+    <div class="starter-menu">
+        <h1>draft/belgian</h1>
+        {% for belgian in belgians %}
+        <h4>{{belgian.title}} <span>{{belgian.price}}</span></h4>
+        <p>{{belgian.description}}</p>
+        {% endfor %}
+    </div>
+
+    <div class="starter-menu">
+        <h1>draft/german</h1>
+        {% for german in germans %}
+        <h4>{{german.title}} <span>{{german.price}}</span></h4>
+        <p>{{german.description}}</p>
+        {% endfor %}
+    </div>
+
+    <div class="starter-menu">
+        <h1>non-alcoholic</h1>
+        {% for na in non_alcoholics %}
+        <h4>{{na.title}} <span>{{na.price}}</span></h4>
+        <p>{{na.description}}</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

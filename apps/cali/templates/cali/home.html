@@ -1,0 +1,91 @@
+{% extends "cali/base.html" %} 
+
+{% load staticfiles %} 
+
+{% block content %}
+<section class="home-hero" id="back">
+    <h1 class="title">
+        thirsty <span>cali</span>
+    </h1>
+    <h2>purveyor of gourmet cali burgers</h2>
+</section>
+
+<section class="about" id="about">
+    <h1>who we are</h1>
+    <!-- <i class="ion-minus-round"></i> -->
+    <div class="about_title">
+        <i class="ion-ios-nutrition-outline"></i>
+        <h3>locally sourced</h3>
+        <p class="about_details">
+            Aute ullamco minim nisi laborum amet irure aliquip adipisicing tempor minim id sint minim. Incididunt duis anim nostrud tempor
+            eiusmod ullamco reprehenderit commodo magna fugiat nostrud amet ad cupidatat. Reprehenderit minim culpa nulla
+            occaecat cupidatat irure labore qui aliquip sunt magna nostrud proident.
+        </p>
+    </div>
+    <div class="about_title">
+        <!-- <img src="{% static 'cali/img/main_pics/burger.png' %}" alt="burger"> -->
+        <i class="ion-icecream"></i>
+        <h3>fresh cali twist</h3>
+        <p class="about_details">
+            Sunt deserunt irure excepteur cupidatat non nisi non in velit tempor esse minim mollit. Eiusmod deserunt qui aliqua aliquip
+            et officia ullamco. Amet nisi aliquip anim velit. Veniam eiusmod exercitation consectetur amet culpa.
+        </p>
+    </div>
+    <div class="about_title">
+        <i class="ion-ios-pint-outline"></i>
+        <h3>diverse craft drinks</h3>
+        <p class="about_details">
+            Qui veniam pariatur sunt sint ex sint. Adipisicing sunt tempor nulla eu irure dolore tempor occaecat ad dolor ea ad id. Officia
+            deserunt aliqua et et quis quis esse deserunt. Lorem ullamco enim irure qui incididunt reprehenderit tempor ipsum
+            qui quis
+        </p>
+
+    </div>
+
+</section>
+
+<section class="mid-background"></section>
+
+<!-- <section class="menu" id="menu">
+    <h1>menu</h1>
+
+
+    <figure class="menu_item menu_one">
+        <img src="{% static 'cali/img/main_pics/bar_one.jpg' %}" alt="food">
+        <figcaption class="menu-desc">
+            <p><strong>good stuff</strong></p>
+            <a href="/menu" id="onclick_menu">view menu</a>
+        </figcaption>
+    </figure>
+
+    <figure class="menu_item">
+        <img src="{% static 'cali/img/main_pics/main_six.jpg' %}" alt="food">
+        <figcaption class="menu-desc">
+            <p><strong>fine list of drinks</strong></p>
+            <a href="/menu" id="onclick_menu">view menu</a>
+        </figcaption>
+    </figure>
+</section> -->
+
+<section class="location js--location" id="location">
+    <div class="location-pic">
+        <img src="{% static 'cali/img/location/location.jpg' %}" alt="location_pic">
+    </div>
+    <div class="location-pic-two">
+        <img src="{% static 'cali/img/location/location-two.jpg' %}" alt="location_pic">
+    </div>
+    <div class="location-details">
+        <h2>DTLA</h2>
+        <p class="location-line">////////////////////////////////////////</p>
+        <h4>LOCATION:</h4>
+        <p><a href="https://www.google.com/maps/place/627+S+Central+Ave,+Los+Angeles,+CA+90021/@34.0384767,-118.2425403,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2c63aae466f27:0x8ad1f931094fbca0!8m2!3d34.0384723!4d-118.2403463">627 S. Central Ave. Los Angeles, CA 90021</a> </p>
+        <h4>HOURS:</h4>
+        <p>Monday - Sunday: 11 am - 1:45 am</p>
+        <h4>CONTACT:</h4>
+        <a href="https://www.linkedin.com/in/stevekimdev/" target="_blank">grillmaster@thirstycali.com</a>
+        <p class="phone">213.786.3333 ext 2</p>
+        <h4 class="location-link"><a href="#">make a group reservation for 12+</a></h4>
+    </div>
+</section>
+
+{% endblock content %}
