@@ -71,7 +71,7 @@ Once activated, you can browse to localhost:8000
 
 ## Live Demo
 
-* [Live Demo](http://54.146.235.215/)
+* [Live Demo](http://54.146.235.215/) - Deployed through [AWS](https://aws.amazon.com/)
 
 ## Authors
 
