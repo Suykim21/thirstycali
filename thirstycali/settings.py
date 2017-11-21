@@ -82,6 +82,16 @@ DATABASES = {
 }
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'thirstycali',
+#         'USER':'root',
+#         'PASSWORD':'root',
+#     }
+# }
+
+
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 
