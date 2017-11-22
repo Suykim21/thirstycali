@@ -75,4 +75,4 @@ Once activated, you can browse to localhost:8000
 
 ## Authors
 
-* **Steve Kim** - *Initial work* - [Suykim21](https://github.com/Suykim21)
+* **Steve Kim** - [Suykim21](https://github.com/Suykim21)
